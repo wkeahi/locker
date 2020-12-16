@@ -15,7 +15,9 @@ Optional:
 
 Clone this repository.
 
-    https://github.com/wkeahi/locker.git
+    git clone https://github.com/wkeahi/locker.git
+    
+After this, there are a few more steps. You can run `setup.sh`in this directory to run the remaining steps in this section.
   
 Inside your local folder for this repo, clone lila.
 
@@ -25,7 +27,7 @@ Inside your local folder for this repo, clone lila-ws.
 
     git clone https://github.com/ornicar/lila-ws.git
 
-Unfortunately, Metals requires `build.sbt` to be in the root. This will mean a few manual steps will be necessary.
+Unfortunately, Metals requires `build.sbt` to be in the root. This will mean a few manual steps will be necessary. 
 
 Create a `.vscode` directory in `lila`.
 
@@ -34,6 +36,14 @@ Create a `.vscode` directory in `lila`.
 Copy `settings.json` to this new folder.
 
     cp settings.json lila/.vscode/
+    
+Copy the configuration file to point lila to the redis and mongo containers.
+
+    cp conf/application.conf lila/conf/
+
+Copy the configuration file to point lila-ws to the redis and mongo containers.
+
+    cp conf/custom_ws.conf lila-ws/
 
 # Usage
 
