@@ -14,7 +14,7 @@ services:
     image: keahi/locker
     stdin_open: true
     tty: true
-    entrypoint: ./entrypoint.sh
+    entrypoint: ./docker-entrypoint-ws.sh
     volumes:
       - ./lila:/home/lila
       - ./lila-ws:/home/lila-ws
