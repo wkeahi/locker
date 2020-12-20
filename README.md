@@ -37,6 +37,8 @@ Copy `settings.json` to this new folder.
 
     cp settings.json lila/.vscode/
     
+Additionally, a few changes to the conf files for lila & lila-ws will have ot be done to point to redis/mongo.
+    
 Copy the configuration file to point lila to the redis and mongo containers.
 
     cp conf/application.conf lila/conf/
@@ -49,9 +51,16 @@ Copy the configuration file to point lila-ws to the redis and mongo containers.
 
 ## Without VS Code
 
+If you would like to start lila and lila-ws (no bloop) as is, change the [entrypoint](https://github.com/wkeahi/locker/blob/main/docker-compose.yml#L17) in `docker-compose.yml` to `docker-entrypoint.sh`.
+
+Then run the following command in the locker directory.
+    
+    docker-compose up
+    
+lila-ws will be started in the background (nothing will be output to the log). Then sbt will be ran. After it has finished, go to [http://127.0.0.1:9663/](http://127.0.0.1:9663/).
 
 ## VS Code
 
-Open the Command Palette (Ctrl+Shift+P/Cmd+Shift+P) and search `Open Container in Folder`. Then select your local `locker` folder. VS Code will automatically 
+Open the Command Palette (Ctrl+Shift+P/Cmd+Shift+P) and search `Remote-Containers: Open Container in Folder`. Then select your local `locker` folder.
 
 
