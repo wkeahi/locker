@@ -57,7 +57,7 @@ Then run the following command in the locker directory.
     
     docker-compose up
     
-lila-ws will be started in the background (nothing will be output to the log). Then sbt will be ran. After it has finished, go to [http://127.0.0.1:9663/](http://127.0.0.1:9663/).
+lila-ws will be started in the background (nothing will be output to the log). Then sbt run. After it has finished, go to [http://127.0.0.1:9663/](http://127.0.0.1:9663/).
 
 ## VS Code
 
