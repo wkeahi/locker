@@ -1,0 +1,29 @@
+version: "3.9"
+services:
+  mongo:
+    image: mongo:4.4.2-bionic
+    networks:
+      - lilanet
+
+  redis:
+    image: redis:6.0.9
+    networks:
+      - lilanet
+
+  lila:
+    image: keahi/locker
+    stdin_open: true
+    tty: true
+    entrypoint: ./entrypoint.sh
+    volumes:
+      - ./lila:/home/lila
+      - ./lila-ws:/home/lila-ws
+    ports:
+      - "9663:9663"
+      - "9664:9664"
+    networks:
+      - lilanet
+
+networks:
+  lilanet:
+      driver: bridge

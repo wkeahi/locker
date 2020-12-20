@@ -1,0 +1,8 @@
+{
+  "files.watcherExclude": {
+    "**/target": true
+  },
+  "metals.scalafmtConfigPath": "/home/lila/.scalafmt.conf",
+  "editor.formatOnSave": true,
+  "metals.javaHome": "/opt/jdk/jdk-14.0.2"
+}
