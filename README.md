@@ -63,4 +63,4 @@ lila-ws will be started in the background (nothing will be output to the log). T
 
 Open the Command Palette (Ctrl+Shift+P/Cmd+Shift+P) and search `Remote-Containers: Open Container in Folder`. Then select your local `locker` folder. VS Code will then prompt you if you would like to import the build, confirm. This will run `sbt bloopInstall`. After it is done compiling, you can use features such as "Go to Definition."
 
-
+Additionally, this repo imposes a few settings to VS Code. To avoid unwanted features the settings are minimal, but you should take a look at [the file](https://github.com/wkeahi/locker/blob/main/settings.json). Namely, lila's `.scalafmt` will be used and files will be formatted on save.
