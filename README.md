@@ -37,7 +37,7 @@ Copy `settings.json` to this new folder.
 
     cp settings.json lila/.vscode/
     
-Additionally, a few changes to the conf files for lila & lila-ws will have ot be done to point to redis/mongo.
+Additionally, a few changes to the conf files for lila & lila-ws will have to be done to point to redis/mongo.
     
 Copy the configuration file to point lila to the redis and mongo containers.
 
